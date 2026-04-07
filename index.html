@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nijanthan K B | AI-Driven Digital Marketing Manager</title>
+  <meta
+    name="description"
+    content="AI-Driven Digital Marketing Manager with expertise in performance marketing, SEO, analytics, automation, web development, Python-based AI trading systems and Flutter app development."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    :root {
+      --bg: #f4f8fc;
+      --bg-soft: #eef4fb;
+      --surface: rgba(255, 255, 255, 0.78);
+      --surface-solid: #ffffff;
+      --surface-strong: rgba(255, 255, 255, 0.92);
+      --text: #0f172a;
+      --muted: #475569;
+      --muted-2: #64748b;
+      --line: rgba(15, 23, 42, 0.08);
+      --line-strong: rgba(15, 23, 42, 0.12);
+      --primary: #2563eb;
+      --primary-2: #0891b2;
+      --accent: #7c3aed;
+      --success: #059669;
+      --shadow-1: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --shadow-2: 0 18px 50px rgba(37, 99, 235, 0.12);
+      --radius-xl: 28px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max-width: 1240px;
+      --transition: 220ms ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 10%, rgba(37, 99, 235, 0.08), transparent 24%),
+        radial-gradient(circle at 92% 16%, rgba(8, 145, 178, 0.09), transparent 22%),
+        radial-gradient(circle at 78% 88%, rgba(124, 58, 237, 0.09), transparent 20%),
+        linear-gradient(180deg, #fbfdff 0%, #f4f8fc 32%, #eef4fb 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .page-shell {
+      position: relative;
+      min-height: 100vh;
+      isolation: isolate;
+    }
+
+    .ambient-orb {
+      position: fixed;
+      z-index: -2;
+      border-radius: 999px;
+      filter: blur(40px);
+      opacity: 0.45;
+      pointer-events: none;
+      animation: floatOrb 14s ease-in-out infinite;
+    }
+
+    .ambient-orb.orb-1 {
+      width: 340px;
+      height: 340px;
+      left: -120px;
+      top: 80px;
+      background: rgba(37, 99, 235, 0.18);
+    }
+
+    .ambient-orb.orb-2 {
+      width: 280px;
+      height: 280px;
+      right: -60px;
+      top: 160px;
+      background: rgba(8, 145, 178, 0.18);
+      animation-delay: -4s;
+    }
+
+    .ambient-orb.orb-3 {
+      width: 280px;
+      height: 280px;
+      right: 12%;
+      bottom: 5%;
+      background: rgba(124, 58, 237, 0.16);
+      animation-delay: -7s;
+    }
+
+    @keyframes floatOrb {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      50% {
+        transform: translate3d(0, -22px, 0) scale(1.06);
+      }
+      100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+
+    .tech-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      background-image:
+        linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 52%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: rgba(244, 248, 252, 0.75);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      transition: box-shadow var(--transition), background var(--transition);
+    }
+
+    .topbar.scrolled {
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      background: rgba(244, 248, 252, 0.88);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 78px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(8, 145, 178, 0.2));
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      box-shadow: var(--shadow-1);
+      flex-shrink: 0;
+    }
+
+    .brand-copy {
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+
+    .nav-link:hover {
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    .section {
+      padding: 68px 0;
+      position: relative;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    }
+
+    .section-heading {
+      max-width: 860px;
+      margin-bottom: 30px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .section-description {
+      font-size: clamp(1rem, 1.3vw, 1.1rem);
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .glass {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-1);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero {
+      padding: 46px 0 22px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-panel {
+      border-radius: var(--radius-xl);
+      padding: 34px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(8, 145, 178, 0.08), transparent 24%);
+      pointer-events: none;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.09);
+      color: var(--primary);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      font-weight: 900;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title .accent {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-summary {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-summary p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 760px;
+    }
+
+    .hero-actions {
+      margin-top: 26px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), border-color var(--transition), color var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: white;
+      box-shadow: 0 16px 30px rgba(37, 99, 235, 0.22);
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--text);
+      border-color: rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-meta {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stat {
+      padding: 18px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .hero-stat-value {
+      display: block;
+      font-size: 1.4rem;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .hero-stat-label {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-card-stack {
+      display: grid;
+      gap: 18px;
+      height: 100%;
+    }
+
+    .profile-card {
+      padding: 24px;
+      border-radius: var(--radius-xl);
+      display: grid;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: '';
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.14), transparent 70%);
+      pointer-events: none;
+    }
+
+    .profile-image-shell {
+      position: relative;
+      border-radius: 24px;
+      padding: 10px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(8, 145, 178, 0.12));
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      box-shadow: var(--shadow-2);
+    }
+
+    .profile-image {
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.7;
+      background: linear-gradient(180deg, #dde8f6, #cfdff3);
+    }
+
+    .profile-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .profile-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    .profile-role {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .profile-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 9px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .contact-card {
+      padding: 22px;
+      border-radius: var(--radius-xl);
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-card-title {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 14px;
+      align-items: start;
+      font-size: 0.95rem;
+    }
+
+    .contact-label {
+      color: var(--muted-2);
+      font-weight: 700;
+    }
+
+    .contact-value {
+      color: var(--text);
+      font-weight: 600;
+      word-break: break-word;
+    }
+
+    .compact-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .compact-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .info-card {
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 28%);
+      pointer-events: none;
+    }
+
+    .info-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .info-copy {
+      color: var(--muted);
+      font-size: 0.97rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 22px;
+    }
+
+    .story-card {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .story-card p + p {
+      margin-top: 14px;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .highlight-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .highlight-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .highlight-index {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .highlight-copy strong {
+      display: block;
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .highlight-copy span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .experience-stack {
+      display: grid;
+      gap: 22px;
+    }
+
+    .experience-card {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience-card::after {
+      content: '';
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 4px;
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0.65), rgba(8, 145, 178, 0.6), rgba(124, 58, 237, 0.6));
+      opacity: 0.85;
+    }
+
+    .experience-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .experience-role {
+      font-size: 1.34rem;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .experience-company {
+      font-size: 1rem;
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .experience-date {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.09);
+      color: var(--primary);
+      font-size: 0.86rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .experience-intro {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 18px;
+      max-width: 980px;
+    }
+
+    .bullet-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 20px;
+      margin-top: 6px;
+    }
+
+    .bullet-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .bullet-card strong {
+      display: block;
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .bullet-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin: 0;
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .capability-card {
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .capability-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.08), transparent 28%);
+      pointer-events: none;
+    }
+
+    .capability-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.14), rgba(8, 145, 178, 0.14));
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      display: grid;
+      place-items: center;
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .capability-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .capability-copy {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .capability-points {
+      display: grid;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .capability-point {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 10px;
+      align-items: start;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .capability-point::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      margin-top: 4px;
+    }
+
+    .skills-layout {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skills-card {
+      border-radius: var(--radius-xl);
+      padding: 26px;
+    }
+
+    .skills-card h3 {
+      font-size: 1.14rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      color: var(--text);
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.04);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      border-radius: var(--radius-xl);
+      padding: 26px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .project-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .project-badge {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.09);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .project-card h3 {
+      font-size: 1.18rem;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .project-list-item {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 10px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .project-list-item::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      margin-top: 4px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .tool-card {
+      border-radius: 20px;
+      padding: 20px;
+      min-height: 100%;
+    }
+
+    .tool-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .tool-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .proof-card,
+    .hire-card,
+    .contact-panel,
+    .footer-card {
+      border-radius: var(--radius-xl);
+      padding: 28px;
+    }
+
+    .proof-list,
+    .hire-list,
+    .credential-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .proof-list-item,
+    .hire-list-item,
+    .credential-item {
+      display: grid;
+      grid-template-columns: 26px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .proof-icon,
+    .hire-icon,
+    .credential-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(37, 99, 235, 0.1);
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 900;
+      margin-top: 1px;
+    }
+
+    .proof-list-item strong,
+    .hire-list-item strong,
+    .credential-item strong {
+      display: block;
+      font-size: 0.97rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .proof-list-item span,
+    .hire-list-item span,
+    .credential-item span {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-panel-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+    }
+
+    .contact-data {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .contact-row-label {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--muted-2);
+    }
+
+    .contact-row-value {
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .cta-box {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(8, 145, 178, 0.08));
+      border: 1px solid rgba(37, 99, 235, 0.1);
+    }
+
+    .cta-box strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.98rem;
+    }
+
+    .footer {
+      padding: 22px 0 50px;
+    }
+
+    .footer-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-link {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1200px) {
+      .hero-grid,
+      .story-grid,
+      .proof-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .capability-grid,
+      .project-grid,
+      .tools-grid,
+      .compact-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* ========================= */
+    /* TECH BACKGROUND */
+    /* ========================= */
+
+    .tech-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -5;
+        overflow: hidden;
+        background: #f8fbff;
+    }
+
+    /* GRID */
+    .tech-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background-image:
+            linear-gradient(rgba(37,99,235,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(37,99,235,0.05) 1px, transparent 1px);
+
+        background-size: 60px 60px;
+        animation: gridMove 20s linear infinite;
+    }
+
+    /* GLOW BLOBS */
+    .tech-bg::after {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
+
+        background:
+            radial-gradient(circle at 20% 30%, rgba(37,99,235,0.18), transparent 40%),
+            radial-gradient(circle at 80% 20%, rgba(124,58,237,0.18), transparent 40%),
+            radial-gradient(circle at 60% 80%, rgba(8,145,178,0.18), transparent 40%);
+
+        filter: blur(60px);
+        animation: blobMove 18s ease-in-out infinite alternate;
+    }
+
+    /* FLOATING DOTS */
+    .tech-particles {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .tech-particles span {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: rgba(37,99,235,0.5);
+        border-radius: 50%;
+        animation: floatDots linear infinite;
+    }
+
+    /* RANDOM POSITIONS */
+    .tech-particles span:nth-child(1){left:10%;animation-duration:12s;}
+    .tech-particles span:nth-child(2){left:25%;animation-duration:16s;}
+    .tech-particles span:nth-child(3){left:40%;animation-duration:10s;}
+    .tech-particles span:nth-child(4){left:55%;animation-duration:18s;}
+    .tech-particles span:nth-child(5){left:70%;animation-duration:14s;}
+    .tech-particles span:nth-child(6){left:85%;animation-duration:20s;}
+
+    /* ANIMATIONS */
+    @keyframes gridMove {
+        0% {background-position:0 0,0 0;}
+        100% {background-position:60px 60px,60px 60px;}
+    }
+
+    @keyframes blobMove {
+        0% {transform: translateY(0) scale(1);}
+        50% {transform: translateY(-40px) scale(1.1);}
+        100% {transform: translateY(30px) scale(1);}
+    }
+
+    @keyframes floatDots {
+        0% {top:110%;opacity:0;}
+        10% {opacity:1;}
+        90% {opacity:0.6;}
+        100% {top:-10%;opacity:0;}
+    }
+
+
+    @media (max-width: 980px) {
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-grid,
+      .skills-layout,
+      .compact-grid-2,
+      .bullet-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 12px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-meta,
+      .capability-grid,
+      .project-grid,
+      .tools-grid,
+      .compact-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        line-height: 1.55;
+      }
+
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .hero-panel,
+      .profile-card,
+      .contact-card,
+      .story-card,
+      .experience-card,
+      .skills-card,
+      .project-card,
+      .proof-card,
+      .hire-card,
+      .contact-panel,
+      .footer-card,
+      .tool-card,
+      .info-card {
+        padding: 22px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.2rem, 12vw, 3.6rem);
+      }
+
+      .section-title {
+        font-size: clamp(1.8rem, 10vw, 2.6rem);
+      }
+
+      .hero-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-item,
+      .contact-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="tech-bg">
+    <div class="tech-particles">
+      <span></span><span></span><span></span>
+      <span></span><span></span><span></span>
+    </div>
+  </div>  
+  <div class="page-shell">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+    <div class="tech-grid"></div>
+
+    <header class="topbar" id="topbar">
+      <div class="container">
+        <nav class="nav">
+          <a href="#home" class="brand" aria-label="Go to top">
+            <span class="brand-mark">NK</span>
+            <span class="brand-copy">
+              <span class="brand-title">Nijanthan K B</span>
+              <span class="brand-subtitle">AI-Driven Digital Marketing Manager</span>
+            </span>
+          </a>
+          <div class="nav-links">
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#capabilities">Capabilities</a>
+            <a class="nav-link" href="#technology">AI & Tech</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-panel glass reveal">
+              <div class="hero-kicker">Portfolio</div>
+              <h1 class="hero-title">
+                Building <span class="accent">growth systems</span>,
+                not just campaigns.
+              </h1>
+              <div class="hero-summary">
+                <p>
+                  I am an AI-driven Digital Marketing Manager with 8+ years of experience across performance marketing,
+                  technical SEO, analytics, campaign optimization, marketing automation, web development and AI-enabled systems.
+                  My work is built around one belief: real business growth happens when marketing strategy is connected to data,
+                  technology, execution and operational discipline.
+                </p>
+                <p>
+                  I bring the rare combination of marketing leadership and technical delivery. I have led teams, built systems,
+                  scaled campaigns, optimized traffic, developed custom websites, created a Python-based AI trading automation system
+                  and built Flutter-based applications. This blend allows me to solve business problems from both the acquisition side
+                  and the systems side.
+                </p>
+              </div>
+              <div class="hero-actions">
+                <a class="button button-primary" href="mailto:nijanthankb@gmail.com">Discuss Opportunities</a>
+                <a class="button button-secondary" href="#experience">See Experience</a>
+              </div>
+              <div class="hero-meta">
+                <div class="hero-stat">
+                  <span class="hero-stat-value">8+</span>
+                  <span class="hero-stat-label">Years in digital growth, SEO, ads and operations</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="hero-stat-value">AI + Tech</span>
+                  <span class="hero-stat-label">Python automation, Flutter apps, web systems</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="hero-stat-value">Full-stack</span>
+                  <span class="hero-stat-label">Marketing strategy, execution, analytics, development</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-card-stack">
+              <div class="profile-card glass reveal">
+                <div class="profile-image-shell">
+                  <div class="profile-image">
+                    <img src="images/1.png" alt="Portrait of Nijanthan K B" />
+                  </div>
+                </div>
+                <div class="profile-caption">
+                  <div>
+                    <div class="profile-name">Nijanthan K B</div>
+                    <div class="profile-role">AI-Driven Digital Marketing Manager</div>
+                  </div>
+                  <div class="profile-badges">
+                    <span class="chip">Growth</span>
+                    <span class="chip">AI</span>
+                    <span class="chip">Development</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-card glass reveal">
+                <div class="contact-card-title">Quick Snapshot</div>
+                <div class="contact-list">
+                  <div class="contact-item">
+                    <div class="contact-label">Phone</div>
+                    <div class="contact-value">+91-8438134442 / +91-9629803984</div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">nijanthankb@gmail.com</div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-label">Base</div>
+                    <div class="contact-value">Tamil Nadu, India</div>
+                  </div>
+                  <div class="contact-item">
+                    <div class="contact-label">Focus</div>
+                    <div class="contact-value">Digital marketing leadership, AI systems, technical growth infrastructure</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Profile</div>
+            <h2 class="section-title">A marketing leader who understands systems, execution and scale.</h2>
+            <p class="section-description">
+              My profile sits at the intersection of performance marketing, technical implementation, data analysis, and AI-backed problem solving.
+              I am not limited to campaign execution. I build the infrastructure that supports better decision-making, better acquisition efficiency,
+              better operational flow and better long-term digital growth.
+            </p>
+          </div>
+
+          <div class="compact-grid-3">
+            <div class="info-card glass reveal">
+              <div class="info-title">What I do best</div>
+              <div class="info-copy">
+                I turn digital marketing into a measurable growth engine by combining paid media, SEO, conversion thinking,
+                content strategy, analytics and automation. My work is rooted in outcomes, not activity.
+              </div>
+            </div>
+            <div class="info-card glass reveal">
+              <div class="info-title">What makes me different</div>
+              <div class="info-copy">
+                I can move from strategy to implementation without friction. I understand leadership, media buying,
+                tracking, websites, full-stack workflows, AI integration and technical execution in one profile.
+              </div>
+            </div>
+            <div class="info-card glass reveal">
+              <div class="info-title">How I think</div>
+              <div class="info-copy">
+                Instead of asking only how to run campaigns, I ask how to build repeatable systems that improve visibility,
+                acquisition, operational efficiency and business resilience over time.
+              </div>
+            </div>
+          </div>
+
+          <div class="story-grid" style="margin-top: 22px;">
+            <div class="story-card glass reveal">
+              <div class="info-title">My professional story</div>
+              <p>
+                I started my career close to the execution layer of digital marketing, working with SEO, paid campaigns,
+                web assets, and optimization tasks. That early exposure built the foundation for how I understand user intent,
+                traffic quality, conversion paths and business visibility.
+              </p>
+              <p>
+                As my responsibilities expanded, I moved beyond isolated tactical work and began owning larger systems:
+                campaign structures, website performance, tracking accuracy, team collaboration, process discipline, and strategic alignment.
+                I learned that marketing performance improves when teams, data and systems work together.
+              </p>
+              <p>
+                That shift led me into broader digital leadership. I worked across digital marketing management, business operations,
+                website development, brand direction, and process improvement. At the same time, I deepened my technical capabilities
+                in HTML, CSS, JavaScript, PHP, Node.js, SQL, Python, WordPress, WooCommerce and later Flutter.
+              </p>
+              <p>
+                Today, my edge is not just that I understand growth channels. It is that I can design the architecture around those channels:
+                traffic strategy, analytics, content structure, automation, dashboard thinking, technical implementations and even AI-powered workflows.
+              </p>
+            </div>
+
+            <div class="story-card glass reveal">
+              <div class="info-title">What employers get when they hire me</div>
+              <div class="highlight-list">
+                <div class="highlight-item">
+                  <div class="highlight-index">1</div>
+                  <div class="highlight-copy">
+                    <strong>Execution with ownership</strong>
+                    <span>I do not need to stay confined to one channel. I can own strategy, implementation, optimization and reporting.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-index">2</div>
+                  <div class="highlight-copy">
+                    <strong>Marketing grounded in systems</strong>
+                    <span>I build repeatable processes, clearer tracking, stronger visibility and more disciplined performance management.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-index">3</div>
+                  <div class="highlight-copy">
+                    <strong>Technical confidence</strong>
+                    <span>I can translate ideas into websites, dashboards, automations, app workflows and AI-backed implementations.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="highlight-index">4</div>
+                  <div class="highlight-copy">
+                    <strong>Business-first thinking</strong>
+                    <span>I focus on visibility, lead generation, efficiency, process quality and measurable business impact.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Experience</div>
+            <h2 class="section-title">Detailed work experience with real responsibilities, not generic labels.</h2>
+            <p class="section-description">
+              Below is a role-by-role view of the responsibilities I handled and the type of value I created. This section reflects the practical
+              work I performed across leadership, growth strategy, team management, analytics, website execution and operations.
+            </p>
+          </div>
+
+          <div class="experience-stack">
+            <article class="experience-card glass reveal">
+              <div class="experience-top">
+                <div>
+                  <div class="experience-role">Digital Marketing Manager</div>
+                  <div class="experience-company">Garment Mantra Lifestyle Ltd</div>
+                </div>
+                <div class="experience-date">2020 – 2026</div>
+              </div>
+              <p class="experience-intro">
+                In this role, I worked as a digital growth leader with direct responsibility over strategy, team coordination, SEO direction,
+                paid media thinking, performance tracking, and cross-functional collaboration. The scope required not just marketing execution,
+                but also structured leadership, operational discipline and better integration between teams and outcomes.
+              </p>
+              <div class="bullet-grid">
+                <div class="bullet-card">
+                  <strong>Team leadership and management</strong>
+                  <p>
+                    Led a dynamic team of designers, CRM specialists, and SEO analysts, fostering a collaborative environment aligned to
+                    departmental and business goals. Supported direction, communication and execution quality across multiple functions.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Mentorship and capability building</strong>
+                  <p>
+                    Provided mentorship, guidance, and professional support to team members, helping improve performance quality,
+                    contribution consistency and growth in responsibility.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Performance tracking systems and KPI discipline</strong>
+                  <p>
+                    Implemented performance tracking systems and KPI monitoring frameworks to evaluate output, improve accountability
+                    and optimize team productivity over time.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Digital marketing strategy development</strong>
+                  <p>
+                    Developed and executed comprehensive digital marketing strategies designed to improve brand visibility, engagement
+                    and lead generation across multiple online channels and customer touchpoints.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Cross-functional strategic alignment</strong>
+                  <p>
+                    Collaborated with cross-functional teams to align marketing plans with business objectives, ensuring consistency in messaging,
+                    stronger campaign direction and better use of internal resources.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Data-driven optimization</strong>
+                  <p>
+                    Integrated campaign insight, analytics interpretation, and decision-making discipline into daily marketing operations to
+                    continuously refine performance and make execution more measurable.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>SEO implementation and organic growth</strong>
+                  <p>
+                    Implemented SEO best practices that supported organic search visibility, stronger keyword positioning, better indexing structure
+                    and long-term traffic growth from search.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>SEO audits and performance analysis</strong>
+                  <p>
+                    Conducted regular SEO audits and reviewed performance metrics to identify opportunities, fix weak points,
+                    improve technical foundations and refine organic strategy continuously.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Creative collaboration and brand consistency</strong>
+                  <p>
+                    Worked closely with designers to create visually aligned marketing materials that supported campaign objectives,
+                    content quality and strong brand consistency across assets.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>External coordination and partnership communication</strong>
+                  <p>
+                    Coordinated with external social media partners and collaborators to execute joint initiatives,
+                    maintain communication quality and support campaign success.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Marketing systems perspective</strong>
+                  <p>
+                    Extended beyond campaign execution by improving structure around planning, reporting, operational flow,
+                    and visibility into what was working, what needed refinement and where scale was possible.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Business-focused digital leadership</strong>
+                  <p>
+                    Helped convert digital marketing into a performance-oriented function by connecting visibility,
+                    lead generation, team performance and optimization into one integrated operating model.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="experience-card glass reveal">
+              <div class="experience-top">
+                <div>
+                  <div class="experience-role">Chief Operations Officer</div>
+                  <div class="experience-company">Promotian Technologies</div>
+                </div>
+                <div class="experience-date">2019 – 2020</div>
+              </div>
+              <p class="experience-intro">
+                This role expanded my perspective from channel performance into broader business operations, strategic planning,
+                process quality, brand development and execution oversight. It strengthened my ability to connect marketing with
+                operational clarity and business development.
+              </p>
+              <div class="bullet-grid">
+                <div class="bullet-card">
+                  <strong>Operational leadership</strong>
+                  <p>
+                    Provided strategic leadership and oversight across operational functions, with an emphasis on efficiency,
+                    scalability, process structure and execution quality.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Brand development strategy</strong>
+                  <p>
+                    Implemented brand development strategies including digital marketing direction, business development thinking,
+                    website design inputs and broader identity-building activities.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Marketing and advertising support</strong>
+                  <p>
+                    Supported marketing strategy creation and advertising initiatives to promote the business more effectively,
+                    increase public visibility and improve communication of value.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Strategic planning for growth</strong>
+                  <p>
+                    Supported business growth through planning, process development and structured decision-making,
+                    improving how goals were translated into action.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Data and metrics analysis</strong>
+                  <p>
+                    Analyzed and interpreted business data and performance metrics to inform strategic decisions,
+                    identify opportunities and support better planning.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Traffic growth direction</strong>
+                  <p>
+                    Directed traffic growth strategies and connected digital efforts with broader business objectives,
+                    helping create stronger visibility and demand momentum.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Execution plans tied to goals</strong>
+                  <p>
+                    Created solution-based execution plans to help meet business goals, translating strategic priorities
+                    into workable initiatives across teams and functions.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Campaign development and monitoring</strong>
+                  <p>
+                    Developed and monitored campaigns with an eye on direction, clarity, output and ongoing refinement.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Custom website development oversight</strong>
+                  <p>
+                    Supported and developed custom websites as part of growth and brand-building activities,
+                    combining business goals with digital presentation.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Website traffic and performance evaluation</strong>
+                  <p>
+                    Evaluated important metrics influencing website traffic and user reach, helping identify priorities
+                    for better optimization and stronger visibility.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Brand awareness and lead generation</strong>
+                  <p>
+                    Built brand awareness and generated leads while managing internal and external campaigns,
+                    balancing execution with strategic oversight.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Operations with marketing fluency</strong>
+                  <p>
+                    Brought together operational thinking and marketing execution in a way that improved alignment,
+                    process quality and overall business responsiveness.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="experience-card glass reveal">
+              <div class="experience-top">
+                <div>
+                  <div class="experience-role">Digital Marketing Executive & Web Developer</div>
+                  <div class="experience-company">SPIK Solutions</div>
+                </div>
+                <div class="experience-date">2015 – 2019</div>
+              </div>
+              <p class="experience-intro">
+                This role was foundational. It strengthened my hands-on capability across digital marketing execution,
+                website building, front-end and back-end implementation, user experience and the technical side of digital growth.
+              </p>
+              <div class="bullet-grid">
+                <div class="bullet-card">
+                  <strong>Front-end development</strong>
+                  <p>
+                    Built responsive and user-friendly interfaces using HTML, CSS, JavaScript, and supporting front-end tools,
+                    with attention to usability across desktop and mobile devices.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Back-end development exposure</strong>
+                  <p>
+                    Worked across back-end technologies such as PHP and Node.js to support more complete website functionality,
+                    system workflows and digital delivery needs.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Responsive website execution</strong>
+                  <p>
+                    Developed websites that balanced business presentation with performance and usability,
+                    ensuring a smoother experience across screens and devices.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Marketing execution foundation</strong>
+                  <p>
+                    Worked on campaign support, visibility improvements, digital asset implementation, and optimization work that
+                    built the foundation for later leadership roles.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>SEO and search visibility orientation</strong>
+                  <p>
+                    Supported SEO work and search visibility improvements by applying structural and content-oriented best practices,
+                    helping connect websites with discoverability.
+                  </p>
+                </div>
+                <div class="bullet-card">
+                  <strong>Technical delivery mindset</strong>
+                  <p>
+                    Learned to translate business needs into functioning web solutions, strengthening my ability to operate where
+                    marketing and development overlap.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="capabilities">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Capabilities</div>
+            <h2 class="section-title">A wide digital growth stack, structured around business outcomes.</h2>
+            <p class="section-description">
+              My capability stack combines strategic marketing, conversion thinking, traffic growth, analytics, automation,
+              content systems, website technology, and team-facing execution. This breadth allows me to contribute as a builder,
+              operator, optimizer and digital growth leader.
+            </p>
+          </div>
+
+          <div class="capability-grid">
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">01</div>
+              <div class="capability-title">Growth marketing & performance execution</div>
+              <div class="capability-copy">
+                I understand how to structure digital growth around acquisition, visibility, efficiency and performance discipline.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">Growth marketing with channel alignment and business-first thinking</div>
+                <div class="capability-point">Performance marketing supported by data, structure, and ongoing optimization</div>
+                <div class="capability-point">Campaign performance optimization with focus on measurable outcomes</div>
+                <div class="capability-point">Social media and paid ads strategy across platform-driven customer journeys</div>
+              </div>
+            </div>
+
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">02</div>
+              <div class="capability-title">SEO, discovery, and traffic quality</div>
+              <div class="capability-copy">
+                Search visibility is a long-term growth engine, and I treat it as a structured system rather than a checklist.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">Technical SEO for crawlability, indexing, and structural health</div>
+                <div class="capability-point">SEM and search strategy thinking connected to intent and discoverability</div>
+                <div class="capability-point">Funnel optimization that connects traffic quality to conversion opportunity</div>
+                <div class="capability-point">Content marketing strategy that supports discoverability and trust</div>
+              </div>
+            </div>
+
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">03</div>
+              <div class="capability-title">Conversion, analytics, and improvement loops</div>
+              <div class="capability-copy">
+                Growth improves when data is interpreted properly and turned into action quickly and consistently.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">Conversion rate optimization with user behavior and funnel thinking</div>
+                <div class="capability-point">Google Analytics and tracking as decision-support infrastructure</div>
+                <div class="capability-point">Performance interpretation for campaigns, websites and business actions</div>
+                <div class="capability-point">Structured reporting and operational visibility for smarter iteration</div>
+              </div>
+            </div>
+
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">04</div>
+              <div class="capability-title">Website systems and eCommerce enablement</div>
+              <div class="capability-copy">
+                Strong digital marketing requires strong digital properties. I understand both the growth and build sides.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">Full-stack web development with practical implementation depth</div>
+                <div class="capability-point">WordPress and WooCommerce for business sites and eCommerce workflows</div>
+                <div class="capability-point">Responsive user interface execution across devices</div>
+                <div class="capability-point">Business websites designed as conversion-supporting assets, not static pages</div>
+              </div>
+            </div>
+
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">05</div>
+              <div class="capability-title">Marketing automation and process design</div>
+              <div class="capability-copy">
+                I value repeatability. Systems, automation, and process clarity improve quality and scale.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">Marketing automation for workflow support and consistency</div>
+                <div class="capability-point">CRM-connected execution with structured follow-up and operational visibility</div>
+                <div class="capability-point">Team KPI systems to improve accountability and output quality</div>
+                <div class="capability-point">Cross-functional coordination that reduces execution friction</div>
+              </div>
+            </div>
+
+            <div class="capability-card glass reveal">
+              <div class="capability-icon">06</div>
+              <div class="capability-title">AI-enabled technical problem solving</div>
+              <div class="capability-copy">
+                My technical capabilities create leverage beyond marketing roles and make me useful in modern AI-first environments.
+              </div>
+              <div class="capability-points">
+                <div class="capability-point">AI tool development and experimentation under the WOLF AI umbrella</div>
+                <div class="capability-point">Python-based AI trading automation system development</div>
+                <div class="capability-point">Flutter-based application development for Google ecosystem workflows</div>
+                <div class="capability-point">A practical approach to combining AI, analytics, automation and execution</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="technology">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">AI & Technology</div>
+            <h2 class="section-title">Technology is not a side note in my profile. It is part of how I create leverage.</h2>
+            <p class="section-description">
+              My technical capability allows me to extend digital marketing into automation, application development, AI-enabled thinking,
+              and execution systems. This makes my profile unusually useful for companies that value both business growth and technical fluency.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card glass reveal">
+              <div class="project-top">
+                <span class="project-badge">Python AI System</span>
+              </div>
+              <h3>AI trading automation system</h3>
+              <p>
+                I developed my own AI-based trading automation system using Python. This project reflects analytical thinking,
+                automation capability, and my ability to design systems that work with data, logic and execution flows.
+              </p>
+              <div class="project-list">
+                <div class="project-list-item">Designed with a system-building mindset rather than a one-off experiment.</div>
+                <div class="project-list-item">Built around automated decision-making, logic-driven execution, and efficiency.</div>
+                <div class="project-list-item">Demonstrates my ability to operate beyond marketing tools and into technical systems.</div>
+              </div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-top">
+                <span class="project-badge">Flutter Apps</span>
+              </div>
+              <h3>Flutter-based application development</h3>
+              <p>
+                I have developed my own Google-app style solutions using Flutter. This expands my profile from web and marketing into
+                mobile application capability, product-minded implementation and modern cross-platform development.
+              </p>
+              <div class="project-list">
+                <div class="project-list-item">Supports stronger product thinking and mobile-first execution capability.</div>
+                <div class="project-list-item">Demonstrates cross-platform development experience outside conventional marketing roles.</div>
+                <div class="project-list-item">Strengthens my ability to contribute in technically ambitious teams and environments.</div>
+              </div>
+            </article>
+
+            <article class="project-card glass reveal">
+              <div class="project-top">
+                <span class="project-badge">Web Systems</span>
+              </div>
+              <h3>Full-stack and website-driven growth infrastructure</h3>
+              <p>
+                My technical background includes front-end and back-end web development, responsive interface building,
+                CMS-driven business sites and support for digital assets that directly affect visibility and conversion.
+              </p>
+              <div class="project-list">
+                <div class="project-list-item">HTML5, CSS3, JavaScript, jQuery, Node.js, PHP, SQL, Python.</div>
+                <div class="project-list-item">WordPress, WooCommerce, and website systems tied to business growth.</div>
+                <div class="project-list-item">Useful for teams that need a marketer who can understand build-level constraints.</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Skills</div>
+            <h2 class="section-title">Complete skill coverage from strategy through implementation.</h2>
+            <p class="section-description">
+              This section reflects the major skill areas represented in my resume and experience. The goal is not to look broad for its own sake,
+              but to show that I can contribute across multiple layers of a modern digital organization.
+            </p>
+          </div>
+
+          <div class="skills-layout">
+            <div class="skills-card glass reveal">
+              <h3>Marketing & growth strategy</h3>
+              <div class="tag-cloud">
+                <span class="skill-tag">Growth Marketing</span>
+                <span class="skill-tag">Performance Marketing</span>
+                <span class="skill-tag">Technical SEO</span>
+                <span class="skill-tag">SEM (Google Ads)</span>
+                <span class="skill-tag">Conversion Rate Optimization</span>
+                <span class="skill-tag">Funnel Optimization</span>
+                <span class="skill-tag">Content Marketing Strategy</span>
+                <span class="skill-tag">Campaign Performance Optimization</span>
+                <span class="skill-tag">Social Media & Paid Ads Strategy</span>
+                <span class="skill-tag">Marketing Automation</span>
+              </div>
+            </div>
+
+            <div class="skills-card glass reveal">
+              <h3>Analytics, reporting, and measurement</h3>
+              <div class="tag-cloud">
+                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Google Analytics</span>
+                <span class="skill-tag">Tracking & Measurement</span>
+                <span class="skill-tag">Google Tag Manager</span>
+                <span class="skill-tag">Looker Studio</span>
+                <span class="skill-tag">Search Console</span>
+                <span class="skill-tag">Performance Interpretation</span>
+                <span class="skill-tag">KPI System Design</span>
+                <span class="skill-tag">Optimization Workflows</span>
+                <span class="skill-tag">Data-Driven Decision-Making</span>
+              </div>
+            </div>
+
+            <div class="skills-card glass reveal">
+              <h3>Web, technical, and build capabilities</h3>
+              <div class="tag-cloud">
+                <span class="skill-tag">Full-Stack Web Development</span>
+                <span class="skill-tag">WordPress</span>
+                <span class="skill-tag">WooCommerce</span>
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">jQuery</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">Python</span>
+              </div>
+            </div>
+
+            <div class="skills-card glass reveal">
+              <h3>AI, app, and modern system capability</h3>
+              <div class="tag-cloud">
+                <span class="skill-tag">AI Tool Development</span>
+                <span class="skill-tag">WOLF AI</span>
+                <span class="skill-tag">Python-Based AI Automation</span>
+                <span class="skill-tag">Flutter App Development</span>
+                <span class="skill-tag">Cross-Functional Collaboration</span>
+                <span class="skill-tag">Team Leadership</span>
+                <span class="skill-tag">Business Process Development</span>
+                <span class="skill-tag">Digital Operations Thinking</span>
+                <span class="skill-tag">Website-led Brand Building</span>
+                <span class="skill-tag">Execution Planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tools">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Tools & Platforms</div>
+            <h2 class="section-title">Platform fluency across ads, SEO, analytics, CRM, eCommerce, and research.</h2>
+            <p class="section-description">
+              My toolkit reflects the environments where I have worked and the types of digital tasks I have managed. I am comfortable working with
+              both execution tools and strategic reporting tools, which helps me move faster and contribute more independently.
+            </p>
+          </div>
+
+          <div class="tools-grid">
+            <div class="tool-card glass reveal">
+              <h3>Marketing & Ads Platforms</h3>
+              <p>Google Ads, Meta Ads Manager, LinkedIn Ads.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>Analytics & Tracking</h3>
+              <p>Google Analytics, Google Tag Manager, Looker Studio, Search Console.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>SEO Tools</h3>
+              <p>SEMrush, Ahrefs, Screaming Frog.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>CRM & Automation</h3>
+              <p>Zoho CRM, HubSpot.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>eCommerce & CMS</h3>
+              <p>WordPress, WooCommerce, Shopify.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>Data & Research</h3>
+              <p>Volza and data-oriented research workflows.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>AI & Content Tools</h3>
+              <p>ChatGPT, Canva, AI-assisted ideation and workflow support.</p>
+            </div>
+            <div class="tool-card glass reveal">
+              <h3>Development Stack</h3>
+              <p>HTML, CSS, JavaScript, jQuery, Node.js, PHP, SQL, Python, Flutter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="credentials">
+        <div class="container">
+          <div class="proof-grid">
+            <div class="proof-card glass reveal">
+              <div class="eyebrow">Credentials</div>
+              <h2 class="section-title" style="font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 12px;">
+                Education and certifications that support both marketing and technical depth.
+              </h2>
+              <p class="section-description" style="max-width: none; margin-bottom: 8px;">
+                My educational base is in computer science, which is one reason I am comfortable operating across web systems,
+                technical marketing implementation, data and AI-backed problem-solving.
+              </p>
+              <div class="credential-list">
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>B.E (CSE) — Al-Ameen Engineering College</strong>
+                    <span>2011 – 2014</span>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>DIT — Al-Ameen Polytechnic College</strong>
+                    <span>2008 – 2011</span>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>Google Certified in Ads Search</strong>
+                    <span>Search advertising and campaign execution fundamentals.</span>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>Google Certified in Analytics</strong>
+                    <span>Measurement, performance tracking and analytics interpretation.</span>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>PHP Certified</strong>
+                    <span>Supports backend and website system capability.</span>
+                  </div>
+                </div>
+                <div class="credential-item">
+                  <div class="credential-icon">✓</div>
+                  <div>
+                    <strong>SQL Certified</strong>
+                    <span>Strengthens data comfort and structured technical reasoning.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hire-card glass reveal">
+              <div class="eyebrow">Why Hire Me</div>
+              <h2 class="section-title" style="font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom: 12px;">
+                This profile closes the gap between strategy, execution, technology and growth.
+              </h2>
+              <div class="hire-list">
+                <div class="hire-list-item">
+                  <div class="hire-icon">1</div>
+                  <div>
+                    <strong>Not limited to one lane</strong>
+                    <span>I can work across SEO, paid media, analytics, reporting, website systems, automation and technical delivery.</span>
+                  </div>
+                </div>
+                <div class="hire-list-item">
+                  <div class="hire-icon">2</div>
+                  <div>
+                    <strong>Leadership with hands-on capability</strong>
+                    <span>I have led teams and systems, but I can also build, optimize, implement and solve directly.</span>
+                  </div>
+                </div>
+                <div class="hire-list-item">
+                  <div class="hire-icon">3</div>
+                  <div>
+                    <strong>Strong fit for modern AI-forward companies</strong>
+                    <span>My profile already includes AI systems, Python-based automation and Flutter application development.</span>
+                  </div>
+                </div>
+                <div class="hire-list-item">
+                  <div class="hire-icon">4</div>
+                  <div>
+                    <strong>Useful in both growth and transformation contexts</strong>
+                    <span>I can improve visibility and acquisition while also improving digital systems and process quality.</span>
+                  </div>
+                </div>
+                <div class="hire-list-item">
+                  <div class="hire-icon">5</div>
+                  <div>
+                    <strong>Business-minded approach</strong>
+                    <span>I think in terms of outcomes: leads, visibility, efficiency, process quality and long-term growth capability.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div class="eyebrow">Contact</div>
+            <h2 class="section-title">Ready for digital marketing, growth, AI, or technically ambitious roles.</h2>
+            <p class="section-description">
+              I am best suited for companies that value strong digital execution, growth thinking, systems discipline,
+              and technical comfort. If your team needs a marketer who can also understand infrastructure, automation and implementation,
+              I would be a strong fit.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-panel glass reveal">
+              <div class="contact-panel-title">Direct contact</div>
+              <p>
+                I am open to discussions for digital marketing management roles, AI-driven growth opportunities,
+                performance marketing leadership, technical marketing roles and positions where strategy and execution need to work together.
+              </p>
+              <div class="contact-data">
+                <div class="contact-row">
+                  <div class="contact-row-label">Email</div>
+                  <div class="contact-row-value">nijanthankb@gmail.com</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-row-label">Phone</div>
+                  <div class="contact-row-value">+91-8438134442 / +91-9629803984</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-row-label">Location</div>
+                  <div class="contact-row-value">Tamil Nadu, India</div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-row-label">Languages</div>
+                  <div class="contact-row-value">Tamil, English</div>
+                </div>
+              </div>
+              <div class="cta-box">
+                <strong>Best role alignment</strong>
+                <span>
+                  AI-driven digital marketing, performance marketing leadership, SEO and growth operations,
+                  technical marketing execution, marketing automation and hybrid marketing-tech positions.
+                </span>
+              </div>
+            </div>
+
+            <div class="contact-panel glass reveal">
+              <div class="contact-panel-title">Value proposition in one paragraph</div>
+              <p>
+                I am a digital marketing professional who can lead teams, build systems, improve visibility, optimize performance,
+                develop websites, understand analytics deeply, and contribute in AI-enabled environments. That combination is uncommon.
+                I do not just bring channel knowledge. I bring systems thinking, technical fluency, operational discipline and a builder mindset.
+              </p>
+              <div class="proof-list" style="margin-top: 18px;">
+                <div class="proof-list-item">
+                  <div class="proof-icon">A</div>
+                  <div>
+                    <strong>Digital marketing manager mindset</strong>
+                    <span>Strong in planning, team alignment, channel execution and performance accountability.</span>
+                  </div>
+                </div>
+                <div class="proof-list-item">
+                  <div class="proof-icon">B</div>
+                  <div>
+                    <strong>Technical implementation confidence</strong>
+                    <span>Comfortable with websites, programming, app workflows and system-level thinking.</span>
+                  </div>
+                </div>
+                <div class="proof-list-item">
+                  <div class="proof-icon">C</div>
+                  <div>
+                    <strong>AI-forward adaptability</strong>
+                    <span>Already building personal AI systems rather than only consuming AI tools.</span>
+                  </div>
+                </div>
+                <div class="proof-list-item">
+                  <div class="proof-icon">D</div>
+                  <div>
+                    <strong>Business-oriented contribution</strong>
+                    <span>Useful to companies that need practical growth, not just activity reporting.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-actions" style="margin-top: 22px;">
+                <a class="button button-primary" href="mailto:nijanthankb@gmail.com">Email Me</a>
+                <a class="button button-secondary" href="#home">Back to Top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-card glass">
+          <div class="footer-copy">
+            © 2026 Nijanthan K B — AI-Driven Digital Marketing Manager, Growth Operator, and Technical Builder.
+          </div>
+          <div class="footer-links">
+            <a class="footer-link" href="#about">Profile</a>
+            <a class="footer-link" href="#experience">Experience</a>
+            <a class="footer-link" href="#technology">AI & Tech</a>
+            <a class="footer-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const topbar = document.getElementById('topbar');
+      const revealElements = document.querySelectorAll('.reveal');
+
+      const updateTopbar = () => {
+        if (window.scrollY > 12) {
+          topbar.classList.add('scrolled');
+        } else {
+          topbar.classList.remove('scrolled');
+        }
+      };
+
+      updateTopbar();
+      window.addEventListener('scroll', updateTopbar, { passive: true });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.14,
+          rootMargin: '0px 0px -40px 0px'
+        }
+      );
+
+      revealElements.forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
